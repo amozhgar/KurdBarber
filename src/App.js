@@ -101,11 +101,20 @@ import Login from "pages/Login.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-// import ComponentRenderer from "ComponentRenderer.js";
-// import MainLandingPage from "MainLandingPage.js";
-// import ThankYouPage from "ThankYouPage.js";
+import ComponentRenderer from "ComponentRenderer.js";
+import MainLandingPage from "MainLandingPage.js";
+import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AgencyLandingPage from "demos/AgencyLandingPage";
+import EventLandingPage from "demos/EventLandingPage";
+import HostingCloudLandingPage from "demos/HostingCloudLandingPage";
+import HotelTravelLandingPage from "demos/HotelTravelLandingPage";
+import SaaSProductLandingPage from "demos/SaaSProductLandingPage";
+import ServiceLandingPage from "demos/ServiceLandingPage";
+import AboutUs from "pages/AboutUs";
+import ContactUs from "pages/ContactUs";
+import Signup from "pages/Signup";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -116,6 +125,18 @@ export default function App() {
       <Switch>
         <Route path={"/"} exact>
           <RestaurantLandingPage />
+        </Route>
+        <Route path="/About-Us">
+          <AboutUs />
+        </Route>
+        <Route path="/Contact-Us">
+          <ContactUs />
+        </Route>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="/Signup">
+          <Signup />
         </Route>
         {/* <Route path="/components/:type/:subtype/:name">
           <ComponentRenderer />

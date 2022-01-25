@@ -9,6 +9,8 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import AboutUs from "pages/AboutUs.js";
+import { Link } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -78,15 +80,14 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">Home</NavLink>
-      <NavLink href="/#">Carers</NavLink>
+      <NavLink href="/About-Us">About Us</NavLink>
+      <NavLink href="/#">Careers</NavLink>
       <NavLink href="/#">Find a Barber</NavLink>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink href="/Contact-Us">Contact Us</NavLink>
+      <NavLink href="/Login" tw="lg:ml-12!">
         Login
       </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/Signup">
         Sign Up
       </PrimaryLink>
     </NavLinks>,
