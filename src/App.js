@@ -138,9 +138,7 @@ export default function App() {
         <Route path="/Signup">
           <Signup />
         </Route>
-        {/* <Route path="/components/:type/:subtype/:name">
-          <ComponentRenderer />
-        </Route> */}
+
         {/* <Route path="/components/:type/:name">
           <ComponentRenderer />
         </Route> */}
