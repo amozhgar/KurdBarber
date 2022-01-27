@@ -3,7 +3,12 @@ import styled from "styled-components";
 import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
 
+// or
+import "./slider.css";
+import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import Header from "../headers/light.js";
 
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
@@ -14,8 +19,7 @@ import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/dot-pattern.svg";
 import DesignIllustration from "../../images/design-illustration.svg";
-
-const Container = tw.div`relative`;
+const Container = tw.div`relative flex items-stretch justify-center text-gray-900 mt-10`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const LeftColumn = tw.div`relative lg:w-6/12 lg:pr-12 flex-shrink-0 text-center lg:text-left`;
 const RightColumn = tw.div`relative mt-12 lg:mt-0 flex flex-col justify-center`;
@@ -60,13 +64,13 @@ const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-p
 
 export default ({
   heading = "Modern React Templates, Just For You",
- description="Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
-  primaryButtonText="Get Started",
-  primaryButtonUrl="#",
-  watchVideoButtonText="Watch Video",
-  watchVideoYoutubeUrl="https://www.youtube.com/embed/_GuOjXYl5ew",
-  imageSrc=DesignIllustration,
-  imageCss=null,
+  description = "Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
+  primaryButtonText = "Get Started",
+  primaryButtonUrl = "#",
+  watchVideoButtonText = "Watch Video",
+  watchVideoYoutubeUrl = "https://www.youtube.com/embed/_GuOjXYl5ew",
+  imageSrc = DesignIllustration,
+  imageCss = null,
   imageDecoratorBlob = false,
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -77,7 +81,7 @@ export default ({
     <>
       <Header />
       <Container>
-        <TwoColumn>
+        {/* <TwoColumn>
           <LeftColumn>
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
@@ -116,7 +120,40 @@ export default ({
           <div className="content">
             <ResponsiveVideoEmbed url={watchVideoYoutubeUrl} tw="w-full" />
           </div>
-        </StyledModal>
+        </StyledModal> */}
+        <Splide
+          className="slider"
+          options={{
+            displayMode: "responsive",
+            perPage: 1,
+            focusAt: "center",
+          }}
+        >
+          <SplideSlide className="slider-item">
+            <div className="slider-item__content">
+              <div className="slider-item__text--container">shut up</div>
+              <div className="slider-item__image--container">
+                <img
+                  className=""
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Hot_Ones_by_First_We_Feast_logo.svg/1200px-Hot_Ones_by_First_We_Feast_logo.svg.png"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide className="slider-item">
+            <div className="slider-item__content">
+              <div className="slider-item__text--container">shut up</div>
+              <div className="slider-item__image--container">
+                <img
+                  className=""
+                  src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </SplideSlide>
+        </Splide>
       </Container>
     </>
   );
