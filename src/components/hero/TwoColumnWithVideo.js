@@ -135,7 +135,7 @@ export default ({
               <div className="slider-item__image--container">
                 <img
                   className=""
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Hot_Ones_by_First_We_Feast_logo.svg/1200px-Hot_Ones_by_First_We_Feast_logo.svg.png"
+                  src="img/IMG_20220226_154113_655.jpg"
                   alt="Image 1"
                 />
               </div>
@@ -147,7 +147,7 @@ export default ({
               <div className="slider-item__image--container">
                 <img
                   className=""
-                  src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                  src="img/IMG_20220226_154113_655.jpg"
                   alt="Image 1"
                 />
               </div>
