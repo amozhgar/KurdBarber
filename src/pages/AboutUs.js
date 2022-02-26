@@ -24,7 +24,7 @@ export default () => {
       <MainFeature1
         subheading={<Subheading>About Us</Subheading>}
         heading="We are a creator of Kurd Barber Website."
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc="img/IMG_0381.JPG"
       />
       <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} />
       <MiniCenteredFooter />

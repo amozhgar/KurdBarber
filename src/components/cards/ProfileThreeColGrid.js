@@ -7,6 +7,7 @@ import {
   SectionHeading,
   Subheading as SubheadingBase,
 } from "components/misc/Headings";
+
 import { SectionDescription } from "components/misc/Typography";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
@@ -45,14 +46,13 @@ const CardLinks = styled.div`
     }
   }
 `;
-
 export default ({
   heading = "Meet These Fine Folks.",
   subheading = "Our Team",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   cards = [
     {
-      imageSrc: "",
+      imageSrc: "img/arkan.jpg",
       position: "UX/UI Designer",
       name: "Arkan A Ahmad",
       links: [
@@ -71,8 +71,7 @@ export default ({
       ],
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=3.45&w=512&h=512&q=80",
+      imageSrc: "img/IMG_6448.JPG",
       position: "Front-End Developer",
       name: "Amozhgar S Baper",
       links: [
@@ -91,8 +90,7 @@ export default ({
       ],
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=3.45&w=512&h=512&q=80",
+      imageSrc: "img/Gradient_20220214_194413.jpg",
       position: "Social Media Specialist",
       name: "Eman Husammadin",
       links: [

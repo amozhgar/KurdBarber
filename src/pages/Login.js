@@ -59,7 +59,7 @@ const IllustrationImage = styled.div`
 export default ({
   logoLinkUrl = "#",
   illustrationImageSrc = illustration,
-  headingText = "Sign In To Treact",
+  headingText = "Sign In To Kurd Barber",
   socialButtons = [
     {
       iconImageSrc: googleIconImageSrc,
@@ -82,7 +82,7 @@ export default ({
       <Content>
         <MainContainer>
           <LogoLink href={logoLinkUrl}>
-            <LogoImage src={logo} />
+            <LogoImage src="img/Logo Container.svg" />
           </LogoLink>
           <MainContent>
             <Heading>{headingText}</Heading>
@@ -130,7 +130,7 @@ export default ({
           </MainContent>
         </MainContainer>
         <IllustrationContainer>
-          <IllustrationImage imageSrc={illustrationImageSrc} />
+          <IllustrationImage imageSrc="img/Logo Container.svg" />
         </IllustrationContainer>
       </Content>
     </Container>
