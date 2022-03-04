@@ -116,6 +116,7 @@ import ServiceLandingPage from "demos/ServiceLandingPage";
 import AboutUs from "pages/AboutUs";
 import ContactUs from "pages/ContactUs";
 import Signup from "pages/Signup";
+import { UserAuthContextProvider } from "context/UserAuthContext";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -133,13 +134,14 @@ export default function App() {
         <Route path="/Contact-Us">
           <ContactUs />
         </Route>
-        <Route path="/Login">
-          <Login />
-        </Route>
-        <Route path="/Signup">
-          <Signup />
-        </Route>
-
+        <UserAuthContextProvider>
+          <Route path="/Login">
+            <Login />
+          </Route>
+          <Route path="/Signup">
+            <Signup />
+          </Route>
+        </UserAuthContextProvider>
         {/* <Route path="/components/:type/:name">
           <ComponentRenderer />
         </Route> */}
