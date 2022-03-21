@@ -15,7 +15,7 @@ module.exports = {
 
       black: "#000",
       white: "#fff",
-
+      primaryBlack:"#212748",
       primary: {
         100: "#a273ff",
         200: "#935bff",
@@ -139,6 +139,7 @@ module.exports = {
         700: "#6b46c1",
         800: "#553c9a",
         900: "#44337a",
+        1000:"#6415FF"
       },
       pink: {
         100: "#fff5f7",

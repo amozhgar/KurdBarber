@@ -13,8 +13,8 @@ import AboutUs from "pages/AboutUs.js";
 import { Link } from "react-router-dom";
 
 const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto
+  flex justify-between items-center bg-white px-24 fixed top-0 z-20 inset-x-0 box-border py-3 
+   flex-1
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -81,7 +81,7 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/About-Us">About Us</NavLink>
-      <NavLink href="/#">Careers</NavLink>
+      <NavLink href="/career">Careers</NavLink>
       <NavLink href="/#">Find a Barber</NavLink>
       <NavLink href="/Contact-Us">Contact Us</NavLink>
       <NavLink href="/Login" tw="lg:ml-12!">

@@ -117,13 +117,21 @@ import AboutUs from "pages/AboutUs";
 import ContactUs from "pages/ContactUs";
 import Signup from "pages/Signup";
 import { UserAuthContextProvider } from "context/UserAuthContext";
+import Career from "pages/Career";
+import Header from 'components/headers/light'
+import tw from "twin.macro";
+
+const GlobalContainer  = tw.div`flex flex-col items-stretch  box-border`;
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
   return (
+    
     <Router>
+      <GlobalContainer>
+        <Header/>
       <Switch>
         <Route path={"/"} exact>
           <RestaurantLandingPage />
@@ -133,6 +141,9 @@ export default function App() {
         </Route>
         <Route path="/Contact-Us">
           <ContactUs />
+        </Route>
+        <Route path='/career'>
+          <Career/>
         </Route>
         <UserAuthContextProvider>
           <Route path="/Login">
@@ -151,8 +162,10 @@ export default function App() {
         {/* <Route path="/">
           <MainLandingPage />
         </Route> */}
-      </Switch>
+      </Switch> 
+      </GlobalContainer>
     </Router>
+   
   );
 }
 
