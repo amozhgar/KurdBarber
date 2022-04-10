@@ -118,54 +118,58 @@ import ContactUs from "pages/ContactUs";
 import Signup from "pages/Signup";
 import { UserAuthContextProvider } from "context/UserAuthContext";
 import Career from "pages/Career";
-import Header from 'components/headers/light'
+import Header from "components/headers/light";
 import tw from "twin.macro";
+import FindBarber from "pages/FindBarber";
 
-const GlobalContainer  = tw.div`flex flex-col items-stretch  box-border`;
+const GlobalContainer = tw.div`flex flex-col items-stretch  box-border`;
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
   return (
-    
-    <Router>
-      <GlobalContainer>
-        <Header/>
-      <Switch>
-        <Route path={"/"} exact>
-          <RestaurantLandingPage />
-        </Route>
-        <Route path="/About-Us">
-          <AboutUs />
-        </Route>
-        <Route path="/Contact-Us">
-          <ContactUs />
-        </Route>
-        <Route path='/career'>
-          <Career/>
-        </Route>
-        <UserAuthContextProvider>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/Signup">
-            <Signup />
-          </Route>
-        </UserAuthContextProvider>
-        {/* <Route path="/components/:type/:name">
+    <UserAuthContextProvider>
+      <Router>
+        <GlobalContainer>
+          <Header />
+          <Switch>
+            <Route path={"/"} exact>
+              <RestaurantLandingPage />
+            </Route>
+            <Route path="/About-Us">
+              <AboutUs />
+            </Route>
+            <Route path="/Contact-Us">
+              <ContactUs />
+            </Route>
+            <Route path="/career">
+              <Career />
+            </Route>
+            <Route path="/FindBarber">
+              <FindBarber />
+            </Route>
+
+            <Route path="/Login">
+              <Login />
+            </Route>
+            <Route path="/Signup">
+              <Signup />
+            </Route>
+
+            {/* <Route path="/components/:type/:name">
           <ComponentRenderer />
         </Route> */}
-        {/* <Route path="/thank-you">
+            {/* <Route path="/thank-you">
           <ThankYouPage />
         </Route> */}
-        {/* <Route path="/">
+            {/* <Route path="/">
           <MainLandingPage />
         </Route> */}
-      </Switch> 
-      </GlobalContainer>
-    </Router>
-   
+          </Switch>
+        </GlobalContainer>
+      </Router>
+    </UserAuthContextProvider>
   );
 }
 

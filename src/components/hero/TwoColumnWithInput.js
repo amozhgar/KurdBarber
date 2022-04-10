@@ -53,11 +53,12 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Beautiful React Templates <span tw="text-primary-500">for you.</span>
+              Beautiful React Templates{" "}
+              <span tw="text-primary-500">for you.</span>
             </Heading>
             <Paragraph>
-              Our templates are easy to setup, understand and customize. Fully modular components with a variety of
-              pages and components.
+              Our templates are easy to setup, understand and customize. Fully
+              modular components with a variety of pages and components.
             </Paragraph>
             <Actions>
               <input type="text" placeholder="Your E-mail Address" />
@@ -70,7 +71,11 @@ export default ({ roundedHeaderButton }) => {
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+              <img
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                src={DesignIllustration}
+                alt="Design Illustration"
+              />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>

@@ -19,7 +19,8 @@ import shopIconImageSrc from "images/shop-icon.svg";
 import ThreeColumnWithProfileImage from "components/testimonials/ThreeColumnWithProfileImage.js";
 import MiniCenteredFooter from "components/footers/MiniCenteredFooter";
 
-export default () => {
+export default (ss) => {
+  console.log(ss);
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-primary-500 px-4 transform -skew-x-12 inline-block`;
@@ -49,17 +50,19 @@ export default () => {
           {
             imageSrc: shopIconImageSrc,
             title: "Locations",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            description: "Can find every shop with search by street or City!",
           },
           {
             imageSrc: chefIconImageSrc,
             title: "Save Time",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            description:
+              "instead of getting in the line for hours during special occasions you can use kurd barber website.",
           },
           {
             imageSrc: celebrationIconImageSrc,
             title: "Smart Booking",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            description:
+              "Advanced booking on our website, you can easily booking And organize your time",
           },
         ]}
         imageContainerCss={tw`p-2!`}
@@ -76,34 +79,28 @@ export default () => {
         }
         faqs={[
           {
-            question: "Are all the templates easily customizable ?",
+            question: "What is Kurdbarber?",
             answer:
               "Yes, they all are. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           },
           {
             question:
-              "How long do you usually support an standalone template for ?",
+              "What are the features that Kurdbarber website provides ?",
             answer:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           },
           {
-            question: "What kind of payment methods do you accept ?",
+            question: "How users can book an appointment ?",
             answer:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           },
           {
-            question:
-              "Is there a subscribption service to get the latest templates ?",
+            question: "Who are the develoers behind the website ?",
             answer:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           },
           {
-            question: "Are the templates compatible with the React ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          },
-          {
-            question: "Do you really support Internet Explorer 11 ?",
+            question: "How barber shops are connected to the website ?",
             answer:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           },

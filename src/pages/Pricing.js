@@ -11,11 +11,9 @@ export default () => {
     <AnimationRevealPage>
       <Header />
       <Pricing />
-      <Testimonial
-        heading="Our Paying Customers"
-      />
+      <Testimonial heading="Our Paying Customers" />
       <FAQ />
-      <Footer/>
+      <Footer />
     </AnimationRevealPage>
   );
 };

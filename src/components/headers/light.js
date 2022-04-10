@@ -82,7 +82,7 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/About-Us">About Us</NavLink>
       <NavLink href="/career">Careers</NavLink>
-      <NavLink href="/#">Find a Barber</NavLink>
+      <NavLink href="/FindBarber">Find a Barber</NavLink>
       <NavLink href="/Contact-Us">Contact Us</NavLink>
       <NavLink href="/Login" tw="lg:ml-12!">
         Login

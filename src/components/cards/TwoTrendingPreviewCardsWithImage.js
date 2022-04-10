@@ -29,9 +29,9 @@ const PrimaryLink = styled(PrimaryLinkBase)`
 `;
 
 const Card = tw.div`mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs`;
-const CardImage = styled.div(props => [
+const CardImage = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
-  tw`h-80 bg-cover bg-center rounded`
+  tw`h-80 bg-cover bg-center rounded`,
 ]);
 
 const CardText = tw.div`mt-4`;
@@ -65,7 +65,7 @@ export default () => {
       title: "A Trip to the Bahamas and the Carribean Ocean",
       trendingText: "Trending",
       durationText: "7 Days Tour",
-      locationText: "Africa"
+      locationText: "Africa",
     },
     {
       imageSrc:
@@ -75,8 +75,8 @@ export default () => {
       title: "Cruise to the Mariana Trench and the Phillipines",
       trendingText: "Trending",
       durationText: "15 Days Tour",
-      locationText: "Australia"
-    }
+      locationText: "Australia",
+    },
   ];
   return (
     <Container>
@@ -86,8 +86,9 @@ export default () => {
             <HeadingInfoContainer>
               <HeadingTitle>Trending Tours</HeadingTitle>
               <HeadingDescription>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua enim ad minim veniam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua enim
+                ad minim veniam.
               </HeadingDescription>
               <PrimaryLink>
                 View All Tours <ArrowRightIcon />
@@ -102,7 +103,8 @@ export default () => {
                   <CardHeader>
                     <CardType>{card.type}</CardType>
                     <CardPrice>
-                      <CardPriceAmount>{card.pricePerDay}</CardPriceAmount> per day
+                      <CardPriceAmount>{card.pricePerDay}</CardPriceAmount> per
+                      day
                     </CardPrice>
                   </CardHeader>
                   <CardTitle>{card.title}</CardTitle>

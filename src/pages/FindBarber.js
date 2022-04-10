@@ -31,7 +31,7 @@ const places = [
   { address: "Binaslawa" },
 ];
 
-const times = [{ type: "Full Time" }, { type: "Part Time" }];
+const times = [{ type: "1 - 3" }, { type: "4 - 5" }];
 
 const jobs = [
   {
@@ -40,18 +40,16 @@ const jobs = [
     location: "Minara",
     email: "Karwan@gmail.com",
     phone: "0750 131 3322",
-    type: "full time",
-    desc: "Need a Someone to clean a barber at 10AM to 10PM",
+    type: "3.0 ⭐",
     image: "img/IMG_20220226_154111_382.jpg",
   },
   {
     id: 2,
     shopName: "Turkish Barber",
-    location: "Ankawa",
+    location: "Havalan",
     email: "kawa@gmail.com",
     phone: "0750 555 2321",
-    type: "part time",
-    desc: "Need a Barber to help at 10AM to 6PM",
+    type: "4.8 ⭐",
     image: "img/IMG_20220226_154106_495.jpg",
   },
   {
@@ -60,8 +58,7 @@ const jobs = [
     location: "Brayati",
     email: "ahmadkawa@gmail.com",
     phone: "0750 131 0021",
-    type: "part time",
-    desc: "Need a Cleaner at 8AM to 2PM",
+    type: "4.0 ⭐",
     image: "img/IMG_20220226_154116_292.jpg",
   },
   {
@@ -70,33 +67,12 @@ const jobs = [
     location: "Baxtyari",
     email: "Hussam@gmail.com",
     phone: "0750 131 2321",
-    type: "full time",
-    desc: "Need a Barber",
+    type: "4.4 ⭐",
     image: "img/IMG_20220226_154113_655.jpg",
   },
 ];
 
-const Career = () => {
-  const [search, setSearch] = useState("");
-  const [dataSource, setdataSource] = useState(jobs);
-  const [getJobs, setGetJobs] = useState([]);
-
-  const searchFilter = (e) => {
-    if (e.target.value != "") {
-      setSearch(e.target.value);
-      const filterJobs = dataSource.filter((o) =>
-        Object.keys(o).some((k) =>
-          String(o[k])
-            .toLocaleLowerCase()
-            .includes(e.target.value.toLocaleLowerCase())
-        )
-      );
-      setGetJobs([...filterJobs]);
-    } else {
-      setSearch(e.target.value);
-      setdataSource((ds) => [...ds]);
-    }
-  };
+const FindBarber = () => {
   const [locationCheckedState, setLocationCheckState] = useState(
     new Array(places.length).fill(false)
   );
@@ -123,13 +99,9 @@ const Career = () => {
   return (
     <PageContainer>
       <Hero>
-        <HeroTitle>Find a Job</HeroTitle>
+        <HeroTitle>Find a Barber</HeroTitle>
         <SearchContainer>
-          <SearchInput
-            placeholder="Search for a job"
-            value={search}
-            onChange={searchFilter}
-          />
+          <SearchInput placeholder="Search for a Barber" />
           <SearchButton>Search</SearchButton>
         </SearchContainer>
       </Hero>
@@ -150,7 +122,7 @@ const Career = () => {
             </label>
           </Location>
         ))}
-        <TimeTitle>Time</TimeTitle>
+        <TimeTitle>Rating</TimeTitle>
         {times.map((time, index) => (
           <Location key={index + `${time.type}`}>
             <input
@@ -166,15 +138,12 @@ const Career = () => {
         ))}
       </LocationContainer>
       <JobContainer>
-        {dataSource.map((job, index) => (
+        {jobList.map((job, index) => (
           <JobCard>
             <JobImg src={job.image} />
             <JobDescription>
               <JobTitle>{job.shopName}</JobTitle>
               <JobLocation>{job.location}</JobLocation>
-              <ContactInfoContainer>
-                <span>{job.desc}</span>
-              </ContactInfoContainer>
               <ContactInfoContainer>
                 <span>{job.email}</span> - <span>{job.phone}</span>
               </ContactInfoContainer>
@@ -190,4 +159,4 @@ const Career = () => {
   );
 };
 
-export default Career;
+export default FindBarber;

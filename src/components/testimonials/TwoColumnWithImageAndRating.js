@@ -4,7 +4,10 @@ import Slider from "react-slick";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import loveIllustrationImageSrc from "images/love-illustration.svg";
 import { ReactComponent as StarIconBase } from "images/star-icon.svg";
@@ -14,15 +17,17 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg"
 const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 xl:w-6/12 flex-shrink-0 relative`;
-const TextColumn = styled(Column)(props => [
+const TextColumn = styled(Column)((props) => [
   tw`md:w-7/12 xl:w-6/12 mt-16 md:mt-0`,
-  props.textOnLeft ? tw`md:pr-12 lg:pr-16 md:order-first` : tw`md:pl-12 lg:pl-16 md:order-last`
+  props.textOnLeft
+    ? tw`md:pr-12 lg:pr-16 md:order-first`
+    : tw`md:pl-12 lg:pl-16 md:order-last`,
 ]);
 
-const Image = styled.img(props => [
+const Image = styled.img((props) => [
   props.imageRounded && tw`rounded`,
   props.imageBorder && tw`border`,
-  props.imageShadow && tw`shadow`
+  props.imageShadow && tw`shadow`,
 ]);
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
@@ -43,7 +48,9 @@ const TestimonialSlider = styled(Slider)`
 
 const Testimonial = tw.div`outline-none h-full flex! flex-col`;
 const StarsContainer = styled.div``;
-const StarIcon = tw(StarIconBase)`inline-block w-5 h-5 text-orange-400 fill-current mr-1 last:mr-0`;
+const StarIcon = tw(
+  StarIconBase
+)`inline-block w-5 h-5 text-orange-400 fill-current mr-1 last:mr-0`;
 const TestimonialHeading = tw.div`mt-4 text-xl font-bold`;
 const Quote = tw.blockquote`mt-4 mb-8 sm:mb-10 leading-relaxed font-medium text-gray-700`;
 
@@ -86,7 +93,7 @@ export default ({
       quote:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
       customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
+      customerTitle: "CEO, Delos Inc.",
     },
     {
       stars: 5,
@@ -96,9 +103,9 @@ export default ({
       quote:
         "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
-    }
-  ]
+      customerTitle: "Founder, EventsNYC",
+    },
+  ],
 }) => {
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -107,7 +114,12 @@ export default ({
       <ContentWithPaddingXl>
         <Row>
           <ImageColumn>
-            <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
+            <Image
+              src={imageSrc}
+              imageBorder={imageBorder}
+              imageShadow={imageShadow}
+              imageRounded={imageRounded}
+            />
           </ImageColumn>
           <TextColumn textOnLeft={textOnLeft}>
             <Subheading>{subheading}</Subheading>
@@ -117,18 +129,25 @@ export default ({
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
                   <StarsContainer>
-                    {Array.from({ length: testimonial.stars }).map((_,indexIcon) => (
-                      <StarIcon key={indexIcon} />
-                    ))}
+                    {Array.from({ length: testimonial.stars }).map(
+                      (_, indexIcon) => (
+                        <StarIcon key={indexIcon} />
+                      )
+                    )}
                   </StarsContainer>
                   <TestimonialHeading>{testimonial.heading}</TestimonialHeading>
                   <Quote>{testimonial.quote}</Quote>
                   <CustomerInfoAndControlsContainer>
                     <CustomerInfo>
-                      <CustomerProfilePicture src={testimonial.profileImageSrc} alt={testimonial.customerName} />
+                      <CustomerProfilePicture
+                        src={testimonial.profileImageSrc}
+                        alt={testimonial.customerName}
+                      />
                       <CustomerTextInfo>
                         <CustomerName>{testimonial.customerName}</CustomerName>
-                        <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
+                        <CustomerTitle>
+                          {testimonial.customerTitle}
+                        </CustomerTitle>
                       </CustomerTextInfo>
                     </CustomerInfo>
                     <Controls>

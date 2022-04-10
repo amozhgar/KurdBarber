@@ -66,19 +66,22 @@ export default () => {
     {
       imageSrc: ShieldIconImage,
       title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      description:
+        "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou.",
     },
     { imageSrc: SupportIconImage, title: "Video Marketing" },
     { imageSrc: CustomizeIconImage, title: "Customer Relation" },
     { imageSrc: ReliableIconImage, title: "Product Outreach" },
     { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { imageSrc: SimpleIconImage, title: "Product Expansion" },
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading>
+          Our Professional <span tw="text-primary-500">Services</span>
+        </Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -88,7 +91,8 @@ export default () => {
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                  {card.description ||
+                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
                 </p>
               </span>
             </Card>

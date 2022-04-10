@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-
+import { Link } from "react-router-dom";
 // or
 import "./slider.css";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
@@ -130,7 +130,19 @@ export default ({
         >
           <SplideSlide className="slider-item">
             <div className="slider-item__content">
-              <div className="slider-item__text--container">shut up</div>
+              <div className="slider-item__text--container">
+                <div>
+                  <h1>Hussam Alrassam Barber</h1>
+                  <p>
+                    Generate Lorem Ipsum placeholder text. Select the number of
+                    characters, words, sentences or paragraphs, and hit
+                    generate!
+                  </p>
+                  <Link to="/FindBarber">
+                    <PrimaryButton>Book Now</PrimaryButton>
+                  </Link>
+                </div>
+              </div>
               <div className="slider-item__image--container">
                 <img
                   className=""
@@ -142,11 +154,23 @@ export default ({
           </SplideSlide>
           <SplideSlide className="slider-item">
             <div className="slider-item__content">
-              <div className="slider-item__text--container">shut up</div>
+              <div className="slider-item__text--container">
+                <div>
+                  <h1>Maqasi Zerrin Barber</h1>
+                  <p>
+                    Generate Lorem Ipsum placeholder text. Select the number of
+                    characters, words, sentences or paragraphs, and hit
+                    generate!
+                  </p>
+                  <Link to="/FindBarber">
+                    <PrimaryButton>Book Now</PrimaryButton>
+                  </Link>
+                </div>
+              </div>
               <div className="slider-item__image--container">
                 <img
                   className=""
-                  src="img/IMG_20220226_154113_655.jpg"
+                  src="img/IMG_20220226_154111_382.jpg"
                   alt="Image 1"
                 />
               </div>

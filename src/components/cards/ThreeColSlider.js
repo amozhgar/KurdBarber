@@ -9,6 +9,8 @@ import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin
 import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
+import { Link } from "react-router-dom";
+import FindBarber from "pages/FindBarber";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -90,35 +92,34 @@ export default () => {
     ],
   };
 
-  /* Change this according to your needs */
   const cards = [
     {
       imageSrc: "img/IMG_20220226_154113_655.jpg",
-      title: "Hussam Alrassam",
+      title: "Hussam Alrassam Barber",
       description:
         "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Ankawa",
-      rating: "4.8",
+      rating: "4.4",
     },
     {
-      imageSrc: "img/IMG_20220226_154113_655.jpg",
-      title: "Hussam Alrassam",
+      imageSrc: "img/IMG_20220226_154116_292.jpg",
+      title: "Family Barber & Salon",
       description:
         "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Ankawa",
-      rating: "4.8",
+      locationText: "Brayati",
+      rating: "4.0",
     },
     {
-      imageSrc: "img/IMG_20220226_154113_655.jpg",
-      title: "Hussam Alrassam",
+      imageSrc: "img/IMG_20220226_154111_382.jpg",
+      title: "Maqasi Zerrin Barber",
       description:
         "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Ankawa",
-      rating: "4.8",
+      locationText: "Minara",
+      rating: "3.0",
     },
     {
-      imageSrc: "img/IMG_20220226_154113_655.jpg",
-      title: "Hussam Alrassam",
+      imageSrc: "img/IMG_20220226_154106_495.jpg",
+      title: "Turkish Barber Shop",
       description:
         "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Ankawa",
@@ -159,16 +160,12 @@ export default () => {
                     </IconContainer>
                     <Text>{card.locationText}</Text>
                   </IconWithText>
-                  <IconWithText>
-                    <IconContainer>
-                      <PriceIcon />
-                    </IconContainer>
-                    <Text>{card.pricingText}</Text>
-                  </IconWithText>
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton>Book Now</PrimaryButton>
+              <Link to="/FindBarber">
+                <PrimaryButton>Book Now</PrimaryButton>
+              </Link>
             </Card>
           ))}
         </CardSlider>

@@ -47,9 +47,9 @@ const CardLinks = styled.div`
   }
 `;
 export default ({
-  heading = "Meet These Fine Folks.",
+  heading = "Meet the Awesome people:",
   subheading = "Our Team",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "We applied our experience we have on Kurd Barber project to make absolutely the best out of it.",
   cards = [
     {
       imageSrc: "img/arkan.jpg",

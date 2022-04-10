@@ -51,7 +51,7 @@ export default ({
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We as senior students of Information Technology Department worked together on this project with direct supervision of Ms. Saja. Our goal is to gather all the barber shops in Erbil city and filter them by quraters so that users can make appointments to manage the crowd before the occasions, beside that we have provided a page that gives the barbershops the ability to share any job vacancies.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = TeamIllustrationSrc,

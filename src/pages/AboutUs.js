@@ -23,7 +23,7 @@ export default () => {
       <Header />
       <MainFeature1
         subheading={<Subheading>About Us</Subheading>}
-        heading="We are a creator of Kurd Barber Website."
+        heading="We are the creator of Kurd Barber Website."
         imageSrc="img/IMG_0381.JPG"
       />
       <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} />
